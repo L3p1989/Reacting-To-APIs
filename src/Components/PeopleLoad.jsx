@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Button } from "reactstrap";
+import PeopleCard from "./PeopleCard";
 
 class PeopleLoad extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class PeopleLoad extends Component {
     this.handleShowClick = this.handleShowClick.bind(this);
     this.handleHideClick = this.handleHideClick.bind(this);
     this.state = {
-      people: [],
+      peoples: [],
       requestPeopleLoad: false
     };
   }
@@ -55,7 +56,7 @@ class PeopleLoad extends Component {
               onClick={e => this.handleShowClick(e)}
               type="submit"
             >
-              Load Films
+              Load Characters
             </Button>
           </>
         )}
