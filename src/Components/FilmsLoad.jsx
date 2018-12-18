@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Button } from "reactstrap";
+import { Row, Button } from "reactstrap";
 import FilmCard from "./FilmCard";
 
 class FilmsLoad extends Component {
@@ -33,12 +33,6 @@ class FilmsLoad extends Component {
       <>
         {requestFilmsLoad ? (
           <>
-            <Row>
-              {this.state.films.map(film => {
-                return <FilmCard key={film.id} film={film} />;
-                //maps films json objects array into a JS film object for each films object for FilmCard to use
-              })}
-            </Row>
             <Button
               block
               className="w-25"
@@ -47,6 +41,12 @@ class FilmsLoad extends Component {
             >
               Unload Films
             </Button>
+            <Row>
+              {this.state.films.map(film => {
+                return <FilmCard key={film.id} film={film} />;
+                //maps films json objects array into a JS film object for each films object for FilmCard to use
+              })}
+            </Row>
           </>
         ) : (
           <>
