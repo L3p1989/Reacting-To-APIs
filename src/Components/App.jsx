@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PostCard from "./PostCard";
 import "isomorphic-fetch";
 import "es6-promise";
+import { Container, Row } from "reactstrap";
 
 class App extends Component {
   constructor(props) {
@@ -19,11 +20,13 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        {this.state.films.map(film => {
-          return <PostCard key={film.id} film={film} />;
-        })}
-      </>
+      <Container>
+        <Row>
+          {this.state.films.map(film => {
+            return <PostCard key={film.id} film={film} />;
+          })}
+        </Row>
+      </Container>
     );
   }
 }
