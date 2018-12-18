@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardTitle, CardText, Col } from "reactstrap";
 
-const PostCard = props => {
+const FilmCard = props => {
   const { title, description } = props.film;
   return (
     <Col sm="6">
@@ -13,4 +13,4 @@ const PostCard = props => {
   );
 }; //creates a card for all films objects and places individual film title and description into the card
 
-export default PostCard;
+export default FilmCard;
