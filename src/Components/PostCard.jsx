@@ -11,6 +11,6 @@ const PostCard = props => {
       </Card>
     </Col>
   );
-};
+}; //creates a card for all films objects and places individual film title and description into the card
 
 export default PostCard;
