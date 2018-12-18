@@ -4,6 +4,7 @@ import "es6-promise";
 import { Container } from "reactstrap";
 import logo from "./../Images/logo.png";
 import FilmsLoad from "./FilmsLoad";
+import PeopleLoad from "./PeopleLoad";
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends Component {
       <Container>
         <img src={logo} alt="" />
         <FilmsLoad />
+        <PeopleLoad />
       </Container>
     );
   }
