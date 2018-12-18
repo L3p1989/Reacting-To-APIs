@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      films: []
+      films: [],
+      nowLoad: false
     };
   }
 
@@ -16,7 +17,7 @@ class App extends Component {
     fetch("https://ghibliapi.herokuapp.com/films")
       .then(res => res.json())
       .then(films => this.setState({ films }));
-  }
+  } //grabs films and creates json object named films
 
   render() {
     return (
@@ -24,6 +25,7 @@ class App extends Component {
         <Row>
           {this.state.films.map(film => {
             return <PostCard key={film.id} film={film} />;
+            //maps films json objects array into a JS film object for each films object for PostCard to use
           })}
         </Row>
       </Container>
