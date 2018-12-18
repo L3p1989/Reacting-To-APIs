@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PostCard from "./PostCard";
 import "isomorphic-fetch";
 import "es6-promise";
-import { Container, Row } from "reactstrap";
+import { Container, Row, Button } from "reactstrap";
 
 class App extends Component {
   constructor(props) {
